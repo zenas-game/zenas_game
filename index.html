@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html>
-<h1>Think you know the motives?</h1>
-<form action="/action_page.php">
-    <label for="passcode">Passcode:</label><br>
-    <input type="text" id="passcode" name="passcode"><br>
-    <input type="submit" value="Submit">
-</form>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-form">
+        <h2>Enter Password</h2>
+        <form id="passwordForm" onsubmit="return validatePassword(event)">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
+    </div>
+
+    <script src="action_page.js"></script>
+</body>
 
 </html>
